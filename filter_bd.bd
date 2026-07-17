@@ -1,0 +1,174 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xAD2188B9806917A5",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../fir_hls.gen/sources_1/bd/filter_bd",
+      "name": "filter_bd",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.2.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "fir_filter_0": ""
+    },
+    "ports": {
+      "ap_clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "ap_rst_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "filter_bd_ap_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "ap_rst_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "rst_r_0": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "input_r_0": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "output_r_ap_vld_0": {
+        "direction": "O"
+      },
+      "output_r_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "ap_done_0": {
+        "direction": "O"
+      },
+      "ap_ready_0": {
+        "direction": "O"
+      },
+      "ap_start_0": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "fir_filter_0": {
+        "vlnv": "xilinx.com:hls:fir_filter:1.0",
+        "ip_revision": "2114660467",
+        "xci_name": "filter_bd_fir_filter_0_0",
+        "xci_path": "ip\\filter_bd_fir_filter_0_0_1\\filter_bd_fir_filter_0_0.xci",
+        "inst_hier_path": "fir_filter_0",
+        "has_run_ip_tcl": "true"
+      }
+    },
+    "nets": {
+      "ap_clk_0_1": {
+        "ports": [
+          "ap_clk_0",
+          "fir_filter_0/ap_clk"
+        ]
+      },
+      "ap_rst_0_1": {
+        "ports": [
+          "ap_rst_0",
+          "fir_filter_0/ap_rst"
+        ]
+      },
+      "ap_start_0_1": {
+        "ports": [
+          "ap_start_0",
+          "fir_filter_0/ap_start"
+        ]
+      },
+      "fir_filter_0_ap_done": {
+        "ports": [
+          "fir_filter_0/ap_done",
+          "ap_done_0"
+        ]
+      },
+      "fir_filter_0_ap_ready": {
+        "ports": [
+          "fir_filter_0/ap_ready",
+          "ap_ready_0"
+        ]
+      },
+      "fir_filter_0_output_r": {
+        "ports": [
+          "fir_filter_0/output_r",
+          "output_r_0"
+        ]
+      },
+      "fir_filter_0_output_r_ap_vld": {
+        "ports": [
+          "fir_filter_0/output_r_ap_vld",
+          "output_r_ap_vld_0"
+        ]
+      },
+      "input_r_0_1": {
+        "ports": [
+          "input_r_0",
+          "fir_filter_0/input_r"
+        ]
+      },
+      "rst_r_0_1": {
+        "ports": [
+          "rst_r_0",
+          "fir_filter_0/rst_r"
+        ]
+      }
+    }
+  }
+}
